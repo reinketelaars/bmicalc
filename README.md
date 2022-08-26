@@ -8,8 +8,8 @@ It uses the _rich_ package for a pretty ui.
 - Rich  
 
 ### Installation
-$ python3 -m venv venv 
-$ . venv/bin/activate 
-$ pip install -r requirements.txt 
-
-
+$ python3 -m venv venv  
+$ . venv/bin/activate  
+$ pip install -r requirements.txt  
+  
+  
