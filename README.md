@@ -1,6 +1,6 @@
 # bmicalc
 
-A simple body mass index (bmi) calculator for the terminal.  
+A simple body mass index (bmi) calculator for the command line.  
 It uses the _rich_ package for a pretty ui.  
 
 ### Requirements  
