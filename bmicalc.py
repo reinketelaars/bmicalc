@@ -1,7 +1,6 @@
 #! /usr/bin/env python3
 
 import os
-#import colorama
 import re
 
 from rich.console import Console
@@ -16,10 +15,6 @@ custom_theme = Theme({
     "my_nr_cyan": "bold not italic cyan",
     })
 console = Console(theme=custom_theme)
-
-# colorama initialiseren, anders werkt move_cursor() niet.
-#colorama.init()
-
 
 class BMI_calc():
     def __init__(self, height: float):
@@ -139,10 +134,6 @@ class ProcessInput():
         return (self._key, self._val)
 
 
-def move_cursor (y:int, x:int):
-    print("\033[%d;%dH" % (y, x))
-
-
 def main():
     b = BMI_calc(1.89) # 1.89 default height. Class BMI_calc sets weight and bmi as zero. For starters.
 
@@ -190,10 +181,6 @@ def main():
         table.add_row(f"Height: ", f"[bold][magenta]{b.height:.2f} m")
         table.add_row(f"Weight: ", f"[bold][magenta]{b.weight:.1f} kg")
         table.add_row(f"BMI: ", f"[bold][magenta]{b.bmi:.1f} kg/m2")
-
-        # Move cursor to top of screen (colorama module required)
-#        Niet nodig, aangezien cursor bovenaan komst met 'clear screen' - colorama ook commented-out; zie boven.
-#        move_cursor(10, 2)
 
         # clear screen
         os.system('cls' if os.name == 'nt' else 'clear') # clear screen
